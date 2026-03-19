@@ -14,7 +14,9 @@ website:
         text: Blog
       - icon: github
         href: https://github.com/marco-gue
-    
+      - icon: boxes
+        href: projects/index.html
+  favicon: caminaconmigo_icon.png
       
 format:
   html:

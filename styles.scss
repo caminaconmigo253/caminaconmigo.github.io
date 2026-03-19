@@ -7,9 +7,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
 
 
-$theme-lightgreen: #eeffee;
-$theme-green: darkgreen;
-$theme-black: black;
+$theme-lightgreen: #7C1C05;
+$theme-green: white;
+$theme-black: white;
 
 /* Colors */
 $body-bg: $theme-lightgreen;
@@ -24,18 +24,63 @@ $font-size-root: 17px;
 /*-- scss:rules --*/
 
 h1 {
-  color: black;
+  color: white;
 }
 
 .navbar * {
-  color: black;
+  color: #7C1C05;
 }
 
 span.navbar-title {
-  color: black;
+  color: #7C1C05;
   transition-duration: 0.1s;
   &:hover {
-    color: grey;
+    color: #E9967A;
     transition-duration: 0.1s;
   }
+}
+
+.section-alt {
+  background-color: white;
+  color: #7C1C05;
+  padding: 3rem 2rem;
+}
+
+.section-alt h1,
+.section-alt h2,
+.section-alt h3 {
+  color: #7C1C05;
+}
+
+.section-alt a {
+  color: #7C1C05;
+}
+
+/* ----------------------- */
+/* fondo con transparencia */
+/* ----------------------- */
+
+.section-alt-t {
+  position: relative;
+  background-image: url("images/toji.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+/* Capa de transparencia */
+.section-alt-t::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(124, 28, 5, 0.65); // ← ajusta aquí
+  z-index: 0;
+}
+
+/* Contenido encima */
+.section-alt-t > * {
+  position: relative;
+  z-index: 1;
 }
